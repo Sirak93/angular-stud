@@ -6,5 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-basics';
+  title = 'Dynamic title';
+  arr = [1, 2, 3];
+  obj = {
+    id: 1,
+    name: 'test Name',
+    c: {
+      cname: 'test Cname'
+    }
+  };
+  inputValue = '';
+  constructor() {
+
+  }
+  onInput(event: any) {
+    this.inputValue = (<HTMLInputElement>event.target).value;
+  }
+  onClick() {
+    console.log('Click')
+  }
+  onBlur(str: string) {
+    this.inputValue = str;
+  }
 }
