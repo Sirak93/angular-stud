@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./twowaybind.component.scss']
 })
 export class TwowaybindComponent implements OnInit {
-
+  title = 'oloil';
+  backgroundToggle = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+  onInput(event: any) {
+    this.title = event.target.value;
   }
 
 }

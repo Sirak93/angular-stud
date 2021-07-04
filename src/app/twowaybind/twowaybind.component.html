@@ -1,1 +1,32 @@
-<p>twowaybind works!</p>
+<!--<input type="text" [value]="title" (input)="onInput($event)">-->
+<!--<input type="text" [(ngModel)]="title">-->
+<!--<p>{{ title }}</p>-->
+
+<button (click)="backgroundToggle = !backgroundToggle">
+  Toggle
+</button>
+<!--<div [ngStyle]="{-->
+<!--  width: '200px',-->
+<!--  height: '200px',-->
+<!--  borderRadius: '5px',-->
+<!--  border: '1px solid black',-->
+<!--  background: backgroundToggle ? 'red' : 'blue'-->
+<!--}">-->
+<!--</div>-->
+
+<!--<p [ngClass]="{-->
+<!--  red: backgroundToggle,-->
+<!--  blue: !backgroundToggle-->
+<!--}">Lorem ipsum dolor sit amet,-->
+<!--  consectetur adipisicing elit.-->
+<!--  Cum, illum?-->
+<!--</p>-->
+
+<p
+  [class.blue]="!backgroundToggle"
+  [class.red]="backgroundToggle"
+>
+  Lorem ipsum dolor sit amet,
+  consectetur adipisicing elit.
+  Cum, illum?
+</p>
